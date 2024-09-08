@@ -1,26 +1,28 @@
 package com.example.gridapp.data
 
-import android.adservices.topics.Topic
+import com.example.gridapp.model.Topic
 import android.os.ext.SdkExtensions
 import androidx.annotation.RequiresExtension
 import com.example.gridapp.R
 
-object DataSource {
+class DataSource {
     @RequiresExtension(extension = SdkExtensions.AD_SERVICES, version = 4)
-    val topics = listOf(
-        Topic(R.string.architecture.toLong(), 58L, R.drawable.architecture.toLong().toInt()),
-        Topic(R.string.crafts.toLong(), 121L, R.drawable.crafts.toLong().toInt()),
-        Topic(R.string.business.toLong(), 78L, R.drawable.business.toLong().toInt()),
-        Topic(R.string.culinary.toLong(), 118L, R.drawable.culinary.toLong().toInt()),
-        Topic(R.string.design.toLong(), 423L, R.drawable.design.toLong().toInt()),
-        Topic(R.string.fashion.toLong(), 92L, R.drawable.fashion.toLong().toInt()),
-        Topic(R.string.film.toLong(), 165L, R.drawable.film.toLong().toInt()),
-        Topic(R.string.gaming.toLong(), 164L, R.drawable.gaming.toLong().toInt()),
-        Topic(R.string.drawing.toLong(), 326L, R.drawable.drawing.toLong().toInt()),
-        Topic(R.string.lifestyle.toLong(), 305L, R.drawable.lifestyle.toLong().toInt()),
-        Topic(R.string.music.toLong(), 212L, R.drawable.music.toLong().toInt()),
-        Topic(R.string.painting.toLong(), 172L, R.drawable.painting.toLong().toInt()),
-        Topic(R.string.photography.toLong(), 321L, R.drawable.photography.toLong().toInt()),
-        Topic(R.string.tech.toLong(), 118L, R.drawable.tech.toLong().toInt())
-    )
+    fun loadTopics(): List<Topic> {
+        return listOf(
+            Topic(R.string.architecture, 58, R.drawable.architecture),
+            Topic(R.string.crafts, 121, R.drawable.crafts),
+            Topic(R.string.business, 78, R.drawable.business),
+            Topic(R.string.culinary, 118, R.drawable.culinary),
+            Topic(R.string.design, 423, R.drawable.design),
+            Topic(R.string.fashion, 92, R.drawable.fashion),
+            Topic(R.string.film, 165, R.drawable.film),
+            Topic(R.string.gaming, 164, R.drawable.gaming),
+            Topic(R.string.drawing, 326, R.drawable.drawing),
+            Topic(R.string.lifestyle, 305, R.drawable.lifestyle),
+            Topic(R.string.music, 212, R.drawable.music),
+            Topic(R.string.painting, 172, R.drawable.painting),
+            Topic(R.string.photography, 321, R.drawable.photography),
+            Topic(R.string.tech, 118, R.drawable.tech)
+        )
+    }
 }
